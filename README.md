@@ -25,6 +25,7 @@ source venv/bin/activate
 **Clone the repository**:
 
 git clone https://github.com/Roohi2204/BioBERT-Cancer-Classifier-Flask.git
+
 cd BioBERT-Cancer-Classifier-Flask
 
 **Install the dependencies**:
