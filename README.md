@@ -1,10 +1,12 @@
 🧬 **BioBERT-Based Genomic Cancer Classifier Web App**
+
 This project showcases an advanced, end-to-end Machine Learning pipeline that uses Transfer Learning to classify cancer types from short DNA sequence mutations. We then deploy this model as a real-time web service using Flask.
 
 The goal was to build a fully functional system that takes raw DNA sequence input and predicts one of three major synthetic cancer types: Breast Cancer (BRCA), Lung Cancer (LUNG), and Colon Adenocarcinoma (COAD).
 
 
 ✨ **Key Features & Technologies**
+
 **Transfer Learning with BioBERT:** We fine-tuned the dmis-lab/biobert-base-cased-v1.1 model, which is pre-trained on massive biomedical text data, for our specific genomic multi-class classification task.
 
 **Genomic Sequence Classification:** This project treats DNA sequences as "text" tokens, validating the use of powerful NLP models (like BERT) for bioinformatics and genomic data analysis.
@@ -17,6 +19,7 @@ The goal was to build a fully functional system that takes raw DNA sequence inpu
 
 
 🚀 **Getting Started**
+
 Follow these steps to get a working copy of the project running on your local machine.PrerequisitesYou'll need Python 3.8+ and pip installed.Bash# Optional: Create a new virtual environment to keep dependencies isolated
 python -m venv venv
 source venv/bin/activate
@@ -47,12 +50,12 @@ Open this URL in your browser to access the prediction interface.
 
 You can test the classifier using sequences that contain the synthetic markers the model was trained on:
 
-Cancer Type Synthetic Marker Sequence
+Cancer Type                  Synthetic Marker Sequence
 
 
-BRCA         ACGT
+BRCA                           ACGT
 
-LUNG         GATTACA
+LUNG                          GATTACA
 
-COAD         TTAG
+COAD                           TTAG
 
