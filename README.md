@@ -32,9 +32,11 @@ cd BioBERT-Cancer-Classifier-Flask
 pip install -r requirements.txt
 
 **Step 1:** Train and Save the ModelRun the training script first. This process downloads the pre-trained BioBERT model and fine-tunes it on the synthetic data, saving the results locally.Generates 1,000 synthetic DNA sequence samples.Fine-tunes the BioBERT model for 3 epochs.Saves the final model weights, tokenizer, and label map to a new ./model/ directory.
+
 python train.py
 
 **Step 2:** Run the Web ApplicationOnce the model/ directory is created, you can start the web service.
+
 python app.py
 
 The application will launch at **http://127.0.0.1:5000/**. 
@@ -42,9 +44,15 @@ Open this URL in your browser to access the prediction interface.
 
 
 **How to Test (Example Patterns)**
+
 You can test the classifier using sequences that contain the synthetic markers the model was trained on:
+
 Cancer Type Synthetic Marker Sequence
+
+
 BRCA         ACGT
+
 LUNG         GATTACA
+
 COAD         TTAG
 
