@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🧬 Cancer Type Predictor from DNA</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; background-color: #f4f7f6; color: #333; display: flex; justify-content: center; align-items: center; min-height: 100vh; margin: 0; }
+        .container { background-color: #ffffff; padding: 40px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); text-align: center; max-width: 600px; width: 90%; }
+        h1 { color: #2c3e50; margin-bottom: 10px; }
+        p { color: #7f8c8d; margin-bottom: 30px; }
+        textarea { width: 100%; height: 120px; padding: 15px; border-radius: 8px; border: 1px solid #dfe6e9; font-size: 16px; margin-bottom: 20px; box-sizing: border-box; resize: vertical; }
+        button { background-color: #3498db; color: white; border: none; padding: 15px 30px; border-radius: 8px; font-size: 18px; cursor: pointer; transition: background-color 0.3s; }
+        button:hover { background-color: #2980b9; }
+        .result { margin-top: 30px; background-color: #ecf0f1; padding: 20px; border-radius: 8px; text-align: left; }
+        .result h2 { color: #2c3e50; margin-top: 0; }
+        .result p { color: #34495e; margin-bottom: 10px; }
+        .result strong { color: #e74c3c; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🧬 Cancer Type Predictor</h1>
+        <p>Enter a DNA sequence (using A, C, G, T) to predict the cancer type.</p>
+        
+        <form action="/" method="post">
+            <textarea name="sequence" placeholder="e.g., GATTACACAGATAGACAGATAGACAGATAGAC...">{% if result %}{{ result.sequence }}{% endif %}</textarea>
+            <button type="submit">Predict</button>
+        </form>
+
+        {% if result %}
+        <div class="result">
+            <h2>Prediction Result</h2>
+            <p><strong>Predicted Cancer Type:</strong> {{ result.label }}</p>
+            <p><strong>Confidence:</strong> {{ result.confidence }}</p>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>

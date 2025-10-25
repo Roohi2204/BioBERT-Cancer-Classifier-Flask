@@ -1,0 +1,11 @@
+# requirements.txt
+
+# Core ML Libraries
+torch
+transformers
+pandas
+scikit-learn
+numpy
+
+# Web Application
+flask
