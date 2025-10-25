@@ -21,27 +21,27 @@ The goal was to build a fully functional system that takes raw DNA sequence inpu
 🚀 **Getting Started**
 
 Follow these steps to get a working copy of the project running on your local machine.PrerequisitesYou'll need Python 3.8+ and pip installed.Bash# Optional: Create a new virtual environment to keep dependencies isolated
-**python -m venv venv
-source venv/bin/activate**
+python -m venv venv
+source venv/bin/activate
 
 **Installation**
 **Clone the repository**:
 
-**git clone https://github.com/Roohi2204/BioBERT-Cancer-Classifier-Flask.git**
+git clone https://github.com/Roohi2204/BioBERT-Cancer-Classifier-Flask.git
 
-**cd BioBERT-Cancer-Classifier-Flask**
+cd BioBERT-Cancer-Classifier-Flask
 
 **Install the dependencies**:
 
-**pip install -r requirements.txt**
+pip install -r requirements.txt
 
 **Step 1:** Train and Save the ModelRun the training script first. This process downloads the pre-trained BioBERT model and fine-tunes it on the synthetic data, saving the results locally.Generates 1,000 synthetic DNA sequence samples.Fine-tunes the BioBERT model for 3 epochs.Saves the final model weights, tokenizer, and label map to a new ./model/ directory.
 
-**python train.py**
+python train.py
 
 **Step 2:** Run the Web ApplicationOnce the model/ directory is created, you can start the web service.
 
-**python app.py**
+python app.py
 
 The application will launch at **http://127.0.0.1:5000/**. 
 Open this URL in your browser to access the prediction interface.
