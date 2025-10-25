@@ -1,0 +1,8 @@
+# .gitignore content
+# Ignore the trained model and tokenizers (Too large for GitHub)
+model/
+
+# Ignore Python environment files
+venv/
+__pycache__/
+*.pyc
